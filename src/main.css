@@ -1,0 +1,29 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.title {
+    text-align: center;
+}
+
+.menuleiste {
+    background-color: #15aaea;
+    height: 50px;
+    /*die drei nachfolgenden Zeilen sind zum Zentrieren der inneren Links*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuleiste a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px 0px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+}
+.menuleiste a:hover {
+    color: orange;
+}
