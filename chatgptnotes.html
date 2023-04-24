@@ -1,0 +1,43 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <label for="username">Benutzername:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="destination">Weiterleitung:</label>
+            <select id="destination" name="destination">
+                <option value="page1.php">Seite 1</option>
+                <option value="page2.php">Seite 2</option>
+                <option value="page3.php">Seite 3</option>
+            </select><br><br>
+            <button type="submit">Anmelden</button>
+        </form>
+    </body>
+    </html>
+
+<?php
+// Überprüfen der Anmeldeinformationen
+$username = $_POST['username'];
+$password = $_POST['password'];
+$destination = $_POST['destination'];
+
+// Dummy-Anmeldeinformationen
+$valid_username = "myusername";
+$valid_password = "mypassword";
+
+if ($username == $valid_username && $password == $valid_password) {
+// Weiterleitung zur ausgewählten Seite
+header("Location: $destination");
+exit();
+} else {
+// Benutzername oder Passwort ungültig
+echo "Ungültiger Benutzername oder Passwort.";
+}
+?>

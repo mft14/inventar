@@ -1,7 +1,88 @@
+:root {
+  --blau1: #10a4e4; /* blaue Farbe */
+  --blau2: #48cce1; /* grüne Farbe */
+  --tertiary-color: #0000ff; /* blaue Farbe */
+}
+
 body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.bluebackground {
+    /* background-color: #10a4e4; */
+    /* background: linear-gradient(to right, red, blue); */
+    background: linear-gradient(to bottom, var(--blau1), var(--blau2));
+}
+
+label {
+    display: block;
+    margin-top: 0px;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fontwhite {
+    color: white;
+}
+
+.loginbox {
+    color: black;
+    padding:-top 50%;
+    background-color: whitesmoke;
+    width: 500px; /* Breite des Container */
+    height: 500px; /* Breite des Container */
+    margin: 0 auto; /* Zentriert den Container horizontal */
+    /* display: flex; /1* Verwendet Flexbox für vertikale Zentrierung *1/ */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    /*x offset, y offset, blur, color*/
+    box-shadow: 6px 6px 20px black;
+}
+
+.textfield {
+    border: 2px solid var(--blau1);
+    display: block;
+    font-size: larger;
+    height: 40px;
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+}
+
+.loginselectbox, option {
+    border: 2px solid var(--blau1);
+    display: block;
+    height: 40px;
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+}
+
+
+.margintopbottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.loginbutton {
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    border: 2px solid var(--blau1);
+    background-color: var(--blau1);
+    display: block;
+    /* height: 40px; */
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+}
+
 
 h1.title {
     text-align: center;
