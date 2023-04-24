@@ -7,7 +7,7 @@
 
 </head>
 <body class="bluebackground center">
-    <h1 class="fontwhite">Login</h1>
+    <h1 class="fontwhite" style="margin-top: 20px;">Login Inventardatenbank</h1>
 
     <div class="loginbox">
 

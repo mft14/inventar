@@ -14,11 +14,6 @@ body {
     margin: auto;
 }
 
-.bluebackground {
-    /* background-color: #10a4e4; */
-    /* background: linear-gradient(to right, red, blue); */
-    background: linear-gradient(to bottom, var(--blau1), var(--blau2));
-}
 
 label {
     display: block;
@@ -43,6 +38,7 @@ label {
     align-items: center; /* Vertikal zentrieren */
     /*x offset, y offset, blur, color*/
     box-shadow: 6px 6px 20px black;
+    padding-top: 30px;
 }
 
 .textfield {
@@ -108,4 +104,31 @@ h1.title {
 .menuleiste a:hover {
     color: orange;
 }
+
+
+/* Animierter Hintergrund*/
+
+
+.bluebackground {
+    /* background: linear-gradient(to right, red, blue); */
+    background: linear-gradient(to bottom, var(--blau1), var(--blau2));
+    animation: gradient 5s ease-in-out infinite;
+}
+
+    @keyframes gradient {
+      0% {
+        /* background: linear-gradient(to bottom, var(--blau1), var(--blau2)); */
+        background: var(--blau1);
+      }
+      50% {
+        /* background: linear-gradient(to bottom, var(--blau1), var(--blau2)); */
+        background: white;
+      }
+      100% {
+        /* background: linear-gradient(to right, var(--blau2), var(--blau1)); */
+        background: var(--blau1);
+      }
+    }
+
+
 
