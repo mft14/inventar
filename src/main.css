@@ -1,7 +1,6 @@
 :root {
   --blau1: #10a4e4; /* blaue Farbe */
   --blau2: #48cce1; /* grüne Farbe */
-  --tertiary-color: #0000ff; /* blaue Farbe */
 }
 
 body {
@@ -13,7 +12,6 @@ body {
     text-align: center;
     margin: auto;
 }
-
 
 label {
     display: block;
@@ -28,10 +26,10 @@ label {
 
 .loginbox {
     color: black;
-    padding:-top 50%;
+    padding-top: 50%;
     background-color: whitesmoke;
     width: 500px; /* Breite des Container */
-    height: 500px; /* Breite des Container */
+    height: 400px; /* Breite des Container */
     margin: 0 auto; /* Zentriert den Container horizontal */
     /* display: flex; /1* Verwendet Flexbox für vertikale Zentrierung *1/ */
     justify-content: center; /* Horizontal zentrieren */
@@ -108,27 +106,33 @@ h1.title {
 
 /* Animierter Hintergrund*/
 
-
 .bluebackground {
     /* background: linear-gradient(to right, red, blue); */
     background: linear-gradient(to bottom, var(--blau1), var(--blau2));
-    animation: gradient 5s ease-in-out infinite;
+    animation: gradient 10s ease-in-out infinite;
 }
 
-    @keyframes gradient {
-      0% {
-        /* background: linear-gradient(to bottom, var(--blau1), var(--blau2)); */
+@keyframes gradient {
+    0% {
         background: var(--blau1);
-      }
-      50% {
-        /* background: linear-gradient(to bottom, var(--blau1), var(--blau2)); */
-        background: white;
-      }
-      100% {
-        /* background: linear-gradient(to right, var(--blau2), var(--blau1)); */
-        background: var(--blau1);
-      }
     }
+    50% {
+        background: var(--blau2);
+    }
+    100% {
+        background: var(--blau1);
+    }
+}
 
+@media screen and (max-width: 900px) {
+}
 
+@media screen and (max-width: 600px) {
 
+.loginbox {
+    width: 100%; /* Breite des Container */
+    height: auto; /* Breite des Container */
+    padding-bottom: 20px;
+}
+
+}

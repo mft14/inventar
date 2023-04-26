@@ -1,7 +1,15 @@
 <h1 class="title">Personalabteilung</h1>
 
 <?php
-    $mysqli = new mysqli("localhost", "mf13", "1Welcome!", "inventarTest");
+    session_start();
+    // Check if user is logged in
+    if(!isset($_SESSION['logged_in']) && !isset($_SESSION['site'])) {
+      header("Location: login.php");
+      exit();
+    }
+
+
+    $mysqli = new mysqli("localhost", "root", "1Welcome!", "inventarTest");
 
     if ($mysqli->connect_errno) {
         echo "Konnte Verbindung zu MySQL nicht herstellen: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;

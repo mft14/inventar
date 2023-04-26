@@ -1,34 +1,59 @@
-<html>
-<head>
-<title>Login</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="src/main.css">
+<?php
+session_start();
 
-</head>
-<body class="bluebackground center">
-    <h1 class="fontwhite" style="margin-top: 20px;">Login Inventardatenbank</h1>
+// Step 1: Connect to Database
+$conn = mysqli_connect("localhost", "root", "1Welcome!", "credentials");
 
-    <div class="loginbox">
+    if ($mysqli->connect_errno) {
+        echo "Konnte Verbindung zu MySQL nicht herstellen: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }
 
-        <form action="login.php" method="post">
+// Step 2: Validate User Input
+$username = $_POST['username'];
+$password = $_POST['password'];
+$site = $_POST['site'];
 
-            <label for="username">Benutzername:</label>
-            <input type="text" id="username" name="username" class="textfield" required><br><br>
+if(empty($username) || empty($password)) {
+  die("Please enter a username and password");
+  echo '<a href="login.html">Zurück</a>';
+}
 
-            <label for="password">Passwort:</label>
-            <input type="password" id="password" name="password" class="textfield" required><br><br>
+// Step 3: Check if User Exists in Database
+$query = "SELECT * FROM logins WHERE username='$username' AND password='$password' AND site='$site'";
+$result = mysqli_query($conn, $query);
 
-            <label for="destination">Abteilung:</label>
-            <select id="destination" name="destination" class="textfield" style="height: 60px;">
-                <option value="page1.php" id="abtleiter">Abteilungsleiter</option>
-                <option value="page2.php" id="itabt">IT Abteilung</option>
-                <option value="page3.php" id="itabt2">IT Abteilung (Einkauf/Marketing)</option>
-                <option value="page4.php" id="personal">Personalabteilung</option>
-            </select><br><br>
-            <button type="submit" class="loginbutton">Anmelden</button>
-        </form>
+if(mysqli_num_rows($result) == 0) {
+  die("Falscher Benutzername, Passwort oder Abteilung. Bitte noch einmal versuchen. ");
+}
 
-    </div>
-</body>
-</html>
+// Step 4: Set Session Variables
+$_SESSION['logged_in'] = true;
+$_SESSION['site'] = $site;
+
+// Step 5: Redirect to Selected Site
+switch($site) {
+  case "site1":
+    $url = "http://localhost:8000/home.php?abtleiter";
+    break;
+  case "site2":
+    $url = "http://localhost:8000/home.php?it";
+    break;
+  case "site3":
+    $url = "http://localhost:8000/home.php?it2";
+    break;
+  case "site4":
+    $url = "http://localhost:8000/home.php?personal";
+    break;
+  default:
+    die("Invalid site selected");
+}
+
+header("Location: $url");
+
+// Step 6: Authenticate User
+// Authenticate user on selected site using stored login credentials
+
+// Step 7: Redirect to Selected Site's Dashboard
+// Redirect user to selected site's dashboard if authentication is successful
+?>
+
