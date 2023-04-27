@@ -7,17 +7,50 @@ CREATE TABLE IF NOT EXISTS abteilung
 	 bezeichnung VARCHAR(45)
 );
 
+INSERT INTO abteilung (bezeichnung) VALUES
+('Vertrieb'),
+('IT'),
+('Schadenregulierung'),
+('Finanzen'),
+('Personal'),
+('Recht');
+
+
 CREATE TABLE IF NOT EXISTS raum
 (
 	raumnummer INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     raumname VARCHAR(45)
 );
 
+INSERT INTO raum (raumname) VALUES
+('Küche'),
+('Mitarbeiter'),
+('Mitarbeiter'),
+('Mitarbeiter'),
+('Mitarbeiter'),
+('Büro'),
+('Büro'),
+('Büro'),
+('Büro'),
+('Büro'),
+('Chefraum');
+
 CREATE TABLE IF NOT EXISTS hersteller 
 (
 	hersteller_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(45)
 );
+
+INSERT INTO hersteller (name) VALUES
+('Bosch'),
+('Shimano'),
+('Fender'),
+('Fedex'),
+('Michelin'),
+('Red Bull'),
+('Yamaha'),
+('Lenovo');
+
 
 CREATE TABLE IF NOT EXISTS kategorie
 (
@@ -51,7 +84,23 @@ CREATE TABLE IF NOT EXISTS mitarbeiter
     	REFERENCES abteilung (abteilung_id)
 );
 
-
+INSERT INTO mitarbeiter (personalnummer, name, vorname) VALUES
+(206874,'Schneider','Felix','Finanzen'),
+(548903,'Bauer','Mia','Personal'),
+(471835,'Yilmaz','Jan','Recht'),
+(278316,'Kühn','Jasmin','Vertrieb'),
+(921403,'Krüger','Sofia','IT'),
+(169523,'Schwarz','Lukas','Schadenregulierung'),
+(835172,'Becker','Kadir','Finanzen'),
+(364582,'Wagner','Katharina','Personal'),
+(291408,'Schmidt','Kamila','Recht'),
+(590413,'Böhm','Emre','Vertrieb'),
+(812574,'Mayer','Jasmin','IT'),
+(367241,'Mertens','Leon','Schadenregulierung'),
+(183756,'Schulze','Maria','Finanzen'),
+(502476,'Tran','Simon','Personal'),
+(712398,'Hoffmann','Mila','Recht'),
+(285364,'Bergmann','Max','Vertrieb');
 
 CREATE TABLE IF NOT EXISTS inventar
 (
@@ -67,6 +116,7 @@ CREATE TABLE IF NOT EXISTS inventar
     FOREIGN KEY (raumnummer)
     	REFERENCES raum (raumnummer)
 );
+
 
 CREATE TABLE IF NOT EXISTS verantwortlichkeit 
 (
