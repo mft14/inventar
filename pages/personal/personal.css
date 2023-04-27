@@ -1,0 +1,35 @@
+input[type="file"] {
+	display: block;
+	margin: 0 auto;
+	padding: 2em;
+	border: thin dotted;
+	background: #fff;
+	text-align: center;
+	margin-top:2em;
+}
+
+form {
+	margin: 1em;
+	padding: 1em;
+	border: thin dotted;
+	background: #ddd;
+	text-align: center;
+}
+h1{
+	text-align: center;
+	font-size: 4em;
+}
+
+h2{
+	text-align: center;
+	font-size:2em;
+}
+
+label{
+	font-size:1.5em;
+}
+
+button{
+	margin-top:2em;
+	font-size:1.3em;
+}

@@ -14,8 +14,8 @@ $password = $_POST['password'];
 $site = $_POST['site'];
 
 if(empty($username) || empty($password)) {
-  die("Please enter a username and password");
-  echo '<a href="login.html">Zurück</a>';
+    die('Please enter a username and password 
+    <a href="logout.php">Zurück zum Login</a>');
 }
 
 // Step 3: Check if User Exists in Database
@@ -23,7 +23,8 @@ $query = "SELECT * FROM logins WHERE username='$username' AND password='$passwor
 $result = mysqli_query($conn, $query);
 
 if(mysqli_num_rows($result) == 0) {
-  die("Falscher Benutzername, Passwort oder Abteilung. Bitte noch einmal versuchen. ");
+    die('Falscher Benutzername, Passwort oder Abteilung. Bitte noch einmal versuchen. 
+        <a href="logout.php">Zurück zum Login</a>');
 }
 
 // Step 4: Set Session Variables
@@ -42,7 +43,7 @@ switch($site) {
     $url = "http://localhost:8000/home.php?it2";
     break;
   case "site4":
-    $url = "http://localhost:8000/home.php?personal";
+    $url = "http://localhost:8000/pages/personal/personal.html";
     break;
   default:
     die("Invalid site selected");
