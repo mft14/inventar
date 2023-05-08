@@ -5,7 +5,7 @@ session_start();
 // Step 1: Connect to Database
 $connection = mysqli_connect("localhost", "root", "1Welcome!", "credentials");
 
-    if ($mysqli->connect_errno) {
+    if ($connection->connect_errno) {
         echo "Konnte Verbindung zu MySQL nicht herstellen: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
     }
 
@@ -30,21 +30,24 @@ if(mysqli_num_rows($result) == 0) {
 
 // Step 4: Set Session Variables
 $_SESSION['logged_in'] = true;
-$_SESSION['site'] = $site;
 
 // Step 5: Redirect to Selected Site
 switch($site) {
   case "abt":
-    $url = "http://localhost:8000/home.php?abtleiter";
+    $url = "http://localhost:8000/abteilungsleiter/index.php";
+    $_SESSION['site'] = 'abt';
     break;
   case "it1":
-    $url = "http://localhost:8000/home.php?it";
+    $url = "http://localhost:8000/itabteilung1/index.php";
+    $_SESSION['site'] = 'it1';
     break;
   case "it2":
-    $url = "http://localhost:8000/home.php?it2";
+    $url = "http://localhost:8000/itabteilung2/index.php";
+    $_SESSION['site'] = 'it2';
     break;
   case "pers":
-    $url = "http://localhost:8000/pages/personal/personal.html";
+    $url = "http://localhost:8000/personal/index.php";
+    $_SESSION['site'] = 'pers';
     break;
   default:
     die("Invalid site selected");
