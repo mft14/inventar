@@ -4,31 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="src/main.css">
+<link rel="shortcut icon" href="src/inventarlogo.png">
 
 </head>
 <body class="bluebackground center">
-    <h1 class="fontwhite" style="margin-top: 20px;">Login Inventardatenbank</h1>
+    <h1 class="fontwhite" style="margin-top: 20px; font-size: 40px;">Inventardatenbank</h1>
 
     <div class="loginbox">
-
         <form action="login.php" method="post">
-
-            <!-- <label for="username">Benutzername:</label> -->
             <input type="text" id="username" name="username" class="textfield" placeholder="Benutzername" required><br><br>
-
-            <!-- <label for="password">Passwort:</label> -->
             <input type="password" id="password" name="password" class="textfield" placeholder="Passwort" required><br><br>
 
-            <label for="destination">Abteilung:</label>
-
+            <label for="destination">Abteilung</label>
             <select name="site" class="textfield" style="height: 60px;">
-                <option value="site1">Abteilungsleiter</option>
-                <option value="site2">IT Abteilung</option>
-                <option value="site3">IT Abteilung (Einkauf/Marketing)</option>
-                <option value="site4">Personalabteilung</option>
+                <option value="abt">Abteilungsleiter</option>
+                <option value="it1">IT Abteilung</option>
+                <option value="it2">IT Abteilung (Einkauf/Marketing)</option>
+                <option value="pers">Personalabteilung</option>
             </select>
-<br><br>
 
+        <br><br>
 
             <button type="submit" class="loginbutton">Anmelden</button>
         </form>

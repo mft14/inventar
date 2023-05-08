@@ -1,6 +1,7 @@
 :root {
   --blau1: #10a4e4; /* blaue Farbe */
   --blau2: #48cce1; /* grüne Farbe */
+  --pixelsize: 64px; /* grüne Farbe */
 }
 
 body {
@@ -71,10 +72,51 @@ label {
     border: 2px solid var(--blau1);
     background-color: var(--blau1);
     display: block;
-    /* height: 40px; */
     margin: auto;
     padding: 10px;
     width: 90%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.loginbutton:hover {
+    color: var(--blau1);
+    background-color: white;
+}
+
+
+.wronglogin {
+    background-color: #ff9393;
+    box-shadow: 6px 6px 20px black;
+    width: 50%;
+    padding: 100px;
+    margin: auto;
+    text-align: center;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 100px;
+}
+
+.wronglogin a {
+    /* color: var(--blau1); */
+    color: blue;
+    text-decoration: none;
+}
+.wronglogin a:hover {
+    text-decoration: underline;
+}
+
+.pixelart {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+.pixelsize {
+    width: var(--pixelsize);
+    height: var(--pixelsize);
+    display: block;
+    margin: auto;
+    padding: 20px;
 }
 
 

@@ -1,3 +1,5 @@
+DROP DATABASE credentials;
+
 CREATE DATABASE IF NOT EXISTS credentials;
 
 USE credentials;
@@ -10,11 +12,15 @@ CREATE TABLE `logins`(
 );
 
 INSERT INTO logins (username, password, site) VALUES 
-('karim', '123456', 'site1'),
-('jannik', '123456', 'site2'),
-('lukas', '123456', 'site3'),
-('mark', '123456', 'site4'),
-('leon', '123456', 'site4');
+('admin', '123456', 'abt'),
+('admin', '123456', 'it1'),
+('admin', '123456', 'it2'),
+('admin', '123456', 'pers'),
+('karim', '123456', 'pers'),
+('jannik', '123456', 'it1'),
+('lukas', '123456', 'it3'),
+('mark', '123456', 'pers'),
+('leon', '123456', 'abt');
 
 
 

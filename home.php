@@ -5,6 +5,7 @@
     <!-- <link rel="shortcut icon" href="assets/icons/mfogo_64x6.ico"> -->
     <link rel="stylesheet" type="text/css" href="src/main.css"> 
     <link rel="stylesheet" type="text/css" href="src/table.css"> 
+    <link rel="shortcut icon" href="src/inventarlogo.png">
 </head>
 <body>
 <header>
@@ -16,10 +17,10 @@
 <main>
     <?php  
         if ($_GET) {
-            if (isset($_GET['abtleiter']))               {include "pages/abtleiter.php";} 
-            if (isset($_GET['it']))                      {include "pages/it.php";} 
-            if (isset($_GET['it2']))                     {include "pages/it2.php";} 
-            if (isset($_GET['personal']))                {include "pages/personal.php";} 
+            if (isset($_GET['abtleiter'])) { include "pages/abtleiter.php";}
+            if (isset($_GET['it']))        { include "pages/it.php";}
+            if (isset($_GET['it2']))       { include "pages/it2.php";}
+            if (isset($_GET['personal']))  { include "pages/personal.php";}
 
         }
     ?>
