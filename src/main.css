@@ -146,6 +146,35 @@ h1.title {
 }
 
 
+
+/* INFOLEISTE */
+
+.infoleiste {
+    display: block;
+    background-color: var(--blau2);
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    padding: 6px;
+}
+
+.infoleiste a {
+    color: blue;
+    text-decoration: none;
+}
+
+.infoleiste a:hover {
+    text-decoration: underline;
+}
+
+.underlined {
+    display: inline;
+    text-align: underline;
+    font-weight: bold;
+}
+
+
+
 /* Animierter Hintergrund*/
 
 .bluebackground {

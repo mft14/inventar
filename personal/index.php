@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <?php
-    session_start();
-    // Check if user is logged in
-    if(!isset($_SESSION['logged_in']) && $_SESSION['site'] != 'pers') {
-      header("Location: ../login.php");
-      exit();
-    }
+session_start();
+// Check if user is logged in
+if(!isset($_SESSION['logged_in']) && $_SESSION['site'] != 'pers') {
+    header("Location: ../login.php");
+    exit();
+}
 ?>
 
 <html lang="de">
@@ -14,18 +14,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personalverwaltung</title>
     <link rel="stylesheet" href="personal.css" type="text/css">
+    <link rel="stylesheet" href="../src/main.css" type="text/css">
     <link rel="shortcut icon" href="../src/inventarlogo.png">
   </head>
   <body>
+
+<?php include '../infoleiste.php'; ?>
+
   <h1>Personalverwaltung</h1>
-
-
-<?php
-    echo "Eingeloggt als " , $_SESSION['username'];
-?>
-<a href="../logout.php" style="text-align: right;">Logout</a>
-
-
 
 
 <h2>Bitte wählen Sie die CSV-Datei aus</h2>
