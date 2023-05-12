@@ -18,7 +18,6 @@ $site = $_POST['site'];
 /* print "Given password: $password"; */
 /* print "Given site: $site"; */
 
-
 /* if(empty($username) || empty($password)) { */
 /*     die('Please enter a username and password */ 
 /*     <a href="logout.php">Zurück zum Login</a>'); */
@@ -30,6 +29,8 @@ $result = mysqli_query($connection, $query);
 
 /* Fehlermeldung */
 if(mysqli_num_rows($result) == 0) {
+    $_SESSION['site'] = $site;
+    $_SESSION['username'] = $username;
     include 'error.php';
 }
 
@@ -42,22 +43,18 @@ $_SESSION['username'] = $username;
 switch($site) {
   case "abt":
     $url = "http://localhost:8000/abteilungsleiter/index.php";
-    /* $_SESSION['site'] = 'abt'; */
     break;
   case "it1":
     $url = "http://localhost:8000/it1/index.php";
-    /* $_SESSION['site'] = 'it1'; */
     break;
   case "it2":
     $url = "http://localhost:8000/it2/index.php";
-    /* $_SESSION['site'] = 'it2'; */
     break;
   case "pers":
     $url = "http://localhost:8000/personal/index.php";
-    /* $_SESSION['site'] = 'pers'; */
     break;
   default:
-    /* die("Invalid site selected"); */
+    die("Invalid site selected");
 }
 
 header("Location: $url");
