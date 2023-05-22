@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
-    session_start();
-    // Check if user is logged in
-    if(!isset($_SESSION['logged_in']) || $_SESSION['site'] == 'abt') {
+    // Check if the user is logged in
+    if (!isset($_COOKIE['loggedin']) || $_COOKIE['loggedin'] != 'true') {
+      // Redirect the user to the login page
       header("Location: ../login.php");
       exit();
     }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <?php
-session_start();
-// Check if user is logged in
-if(!isset($_SESSION['logged_in']) && $_SESSION['site'] != 'pers') {
-    header("Location: ../login.php");
-    exit();
-}
+    // Check if the user is logged in
+    if (!isset($_COOKIE['loggedin']) || $_COOKIE['loggedin'] != 'true') {
+      // Redirect the user to the login page
+      header("Location: ../login.php");
+      exit();
+    }
 ?>
 
 <html lang="de">
@@ -22,7 +22,6 @@ if(!isset($_SESSION['logged_in']) && $_SESSION['site'] != 'pers') {
 <?php include '../infoleiste.php'; ?>
 
   <h1>Personalverwaltung</h1>
-
 
 <h2>Bitte wählen Sie die CSV-Datei aus</h2>
 <form action="personal.php" method="post" enctype="multipart/form-data">
