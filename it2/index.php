@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <?php
+    session_start();
     // Check if the user is logged in
-    if (!isset($_COOKIE['loggedin']) || $_COOKIE['loggedin'] != 'true') {
-      // Redirect the user to the login page
-      header("Location: ../login.php");
+    if (!isset($_COOKIE['loggedin']) || $_COOKIE['loggedin'] != 'true' || $_SESSION['role'] != 'it2') {
+      header("Location: ../login.php"); // Redirect the user to the login page
       exit();
     }
 ?>
+
 <html lang="de">
  <head>
     <meta charset="utf-8">
