@@ -1,0 +1,82 @@
+/* Allgemeine Formatierung */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+/* Header-Formatierung */
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Dropdown-Formatierung */
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 5px;
+  font-size: 2em;
+}
+
+select {
+  font-size: 18px;
+  padding: 5px;
+   margin: 0 auto;
+}
+
+/* Tabelle-Formatierung */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table-wrapper {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+table-wrapper h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+selected-values {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+thead {
+  background-color: #f5f5f5;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Alternierende Reihenfarbe */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Footer-Formatierung */
+footer {
+  background-color: #ddd;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}

@@ -78,9 +78,8 @@ if(isset($_POST['submit'])){
 
             header("Location: $url");
 
-            // Else if number of row is less than zero
         } else {
-            echo '<div class="error">Error! <br>Falscher Benutzername oder Passwort</div>'; // Display failed message
+            echo '<div class="error">Falscher Benutzername oder Passwort</div>'; // Display failed message
         }
     }
 }

@@ -1,0 +1,120 @@
+/* Allgemeine Stile */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.date-range {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.date-range label {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.button-container button {
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.button-container button:hover {
+  background-color: #45a049; /* Neue Hintergrundfarbe beim Hovern */
+}
+
+.left-table {
+  width: 50%;
+  float: left;
+}
+
+.right-table {
+  width: 50%;
+  float: right;
+}
+
+.table-wrapper {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.table-wrapper h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.selected-values {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+/* Stil für die Tabellen */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #eaf6ff;
+}
+
+/* Farben für Tabellenzeilen */
+tbody tr:nth-child(odd) {
+  background-color: #eaf6ff;
+}
+
+/* Farben für ausgewählte Werte */
+.selected-values {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Medienabfragen für responsive Darstellung */
+@media (max-width: 768px) {
+  .table-wrapper {
+    width: 100%;
+  }
+}

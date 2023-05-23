@@ -220,7 +220,7 @@ h1.title {
 .bluebackground {
     /* background: linear-gradient(to right, red, blue); */
     background: linear-gradient(to bottom, var(--blau1), var(--blau2));
-    animation: gradient 10s ease-in-out infinite;
+    animation: gradient 20s ease-in-out infinite;
 }
 
 @keyframes gradient {

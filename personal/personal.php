@@ -1,5 +1,5 @@
     <?php
-	$db_adresse = mysqli_connect('localhost', 'root', '', 'inventurdatenbank');
+	$db_adresse = mysqli_connect('localhost', 'root', '', 'inventardatenbank');
 	
 	if(!$db_adresse)
 	{
