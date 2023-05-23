@@ -26,5 +26,7 @@ exit();
                 <input name="file" type="file" size="50" accept=".csv"> </label>
             <input type="submit" value="Upload" method="post" action="personal.php" name="file">
         </form>
+
+
     </body>
 </html>
