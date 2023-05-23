@@ -16,7 +16,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="einkauf.js"></script> <!-- Verweis auf die JavaScript-Datei -->
     <link rel="stylesheet" href="../src/main.css" type="text/css">
-    <link rel="shortcut icon" href="../src/inventarlogo.png">
+    <link rel="shortcut icon" href="../src/inventarlogo.svg">
 </head>
 <body onload="populateDropdown();populateDropdownRaum()">
     <?php include '../infoleiste.php'; ?>

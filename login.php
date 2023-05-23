@@ -1,6 +1,7 @@
 <html>
 <body class="bluebackground">
 <link rel="stylesheet" type="text/css" href="src/main.css">
+<link rel="shortcut icon" href="src/inventarlogo.svg">
 
     <h1 style="margin: 10px 0px 20px 0px;" class="center fontwhite">Inventardatenbank</h1>
     <div class="loginbox">
@@ -11,20 +12,27 @@
             <div><input type="password" class="textbox" id="password" name="password" placeholder="Password"/></div>
 
         <div class="radiobox">
-            <label for="abt">ABT:</label>
-            <input class="radio" type="radio" id="abt" name="role" value="abt" checked>
 
-            <label for="it">IT1:</label>
-            <input class="radio" type="radio" id="it1" name="role" value="it1">
-
-            <label for="it2">IT2:</label>
-            <input class="radio" type="radio" id="it2" name="role" value="it2">
-
-            <label for="pers">Pers:</label>
-            <input class="radio" type="radio" id="pers" name="role" value="pers">
+<table class="radiotable">
+    <tr>
+        <td><label for="abt">ABT</label></td>
+        <td><input class="radio" type="radio" id="abt" name="role" value="abt" checked></td>
+        <td class="placeholderradio"></td>
+        <td><label for="it">IT1</label></td>
+        <td><input class="radio" type="radio" id="it1" name="role" value="it1"></td>
+    </tr>
+    <tr>
+        <td><label for="pers">PER</label></td>
+        <td><input class="radio" type="radio" id="pers" name="role" value="pers"></td>
+        <td class="placeholderradio"></td>
+        <td><label for="it2">IT2</label></td>
+        <td><input class="radio" type="radio" id="it2" name="role" value="it2"></td>
+    </tr>
+</table>
 
             <div> <input type="submit" class="loginbutton" value="Einloggen" name="submit" id="submit" /> </div>
         </div>
+
 
 <?php
 session_start();

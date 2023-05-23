@@ -14,7 +14,7 @@ exit();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personalverwaltung</title>
         <link rel="stylesheet" href="../src/main.css" type="text/css">
-        <link rel="shortcut icon" href="../src/inventarlogo.png">
+        <link rel="shortcut icon" href="../src/inventarlogo.svg">
         <link rel="stylesheet" href="personal.css" type="text/css">
     </head>
     <body>

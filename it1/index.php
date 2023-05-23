@@ -12,7 +12,7 @@
 <meta charset="utf-8">
   <title>Asset-Management</title>
   <link rel="stylesheet" href="../src/main.css" type="text/css">
-  <link rel="shortcut icon" href="../src/inventarlogo.png">
+  <link rel="shortcut icon" href="../src/inventarlogo.svg">
   <link rel="stylesheet" href="itab2.css"> <!-- Verweis auf die CSS-Datei -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="itab.js"></script>

@@ -13,7 +13,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="leitung.css">
     <link rel="stylesheet" href="../src/main.css" type="text/css">
-    <link rel="shortcut icon" href="../src/inventarlogo.png">
+    <link rel="shortcut icon" href="../src/inventarlogo.svg">
 </head>
 <body>
     <?php include '../infoleiste.php'; ?>
