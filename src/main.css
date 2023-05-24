@@ -1,6 +1,8 @@
 :root {
   --blau1: #10a4e4; /* blaue Farbe */
   --blau2: #48cce1; /* grüne Farbe */
+  --verlauf1: blue; /* blaue Farbe */
+  --verlauf2: violet; /* blaue Farbe */
   --pixelsize: 64px; /* grüne Farbe */
 }
 
@@ -237,32 +239,23 @@ h1.title {
 /* Animierter Hintergrund*/
 
 .bluebackground {
-    /* background: linear-gradient(to right, red, blue); */
+    /* background: linear-gradient(to bottom right, #BF003F, #3000CF); */
     background: linear-gradient(to bottom, var(--blau1), var(--blau2));
-    animation: gradient 20s ease-in-out infinite;
+    /* animation: gradient 10s ease-in-out infinite; */
 }
 
 @keyframes gradient {
-    0% {
-        background: var(--blau1);
-    }
-    50% {
-        background: var(--blau2);
-    }
-    100% {
-        background: var(--blau1);
-    }
+    0%   { background: var(--blau1); }
+    50%  { background: var(--blau2); }
+    100% { background: var(--blau1); }
 }
 
-@media screen and (max-width: 900px) {
-}
+@media screen and (max-width: 900px) { }
 
 @media screen and (max-width: 600px) {
-
-.loginbox {
-    width: 100%; /* Breite des Container */
-    height: auto; /* Breite des Container */
-    padding-bottom: 80px;
-}
-
+    .loginbox {
+        width: 100%; /* Breite des Container */
+        height: auto; /* Breite des Container */
+        padding-bottom: 80px;
+    
 }

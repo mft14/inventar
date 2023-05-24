@@ -7,9 +7,9 @@
     <div class="loginbox">
         <form method="post" action="">
 
-            <div><input type="text" class="textbox" id="username" name="username" placeholder="Username" /></div>
+            <div><input type="text" class="textbox" id="username" name="username" pattern="[A-Za-z0-9]+" placeholder="Username" required /></div>
             <br>
-            <div><input type="password" class="textbox" id="password" name="password" placeholder="Password"/></div>
+            <div><input type="password" class="textbox" id="password" name="password" pattern="[A-Za-z0-9]+" placeholder="Password" required /></div>
 
         <div class="radiobox">
 
