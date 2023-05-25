@@ -1,5 +1,6 @@
-CREATE DATABASE IF NOT EXISTS inventurdatenbank;
-USE inventurdatenbank;
+DROP DATABASE IF EXISTS inventardatenbank;
+CREATE DATABASE inventardatenbank;
+USE inventardatenbank;
 
 CREATE TABLE IF NOT EXISTS abteilung 
 (
@@ -14,7 +15,8 @@ INSERT INTO abteilung (bezeichnung) VALUES
 ('Finanzen'),
 ('Personal'),
 ('Recht');
-
+('Kundenservice');
+('Aktuariat');
 
 CREATE TABLE IF NOT EXISTS raum
 (
@@ -24,15 +26,15 @@ CREATE TABLE IF NOT EXISTS raum
 
 INSERT INTO raum (raumname) VALUES
 ('Küche'),
-('Mitarbeiter'),
-('Mitarbeiter'),
-('Mitarbeiter'),
-('Mitarbeiter'),
-('Büro'),
-('Büro'),
-('Büro'),
-('Büro'),
-('Büro'),
+('Mitarbeiter Ahrens'),
+('Mitarbeiter Müller'),
+('Mitarbeiter Meier'),
+('Mitarbeiter Mustermann'),
+('Büro Einkauf'),
+('Büro Verkauf'),
+('Büro IT'),
+('Büro Recht'),
+('Büro Kundenservice'),
 ('Chefraum');
 
 CREATE TABLE IF NOT EXISTS hersteller 
@@ -84,23 +86,6 @@ CREATE TABLE IF NOT EXISTS mitarbeiter
     	REFERENCES abteilung (abteilung_id)
 );
 
-INSERT INTO mitarbeiter (personalnummer, name, vorname) VALUES
-(206874,'Schneider','Felix','Finanzen'),
-(548903,'Bauer','Mia','Personal'),
-(471835,'Yilmaz','Jan','Recht'),
-(278316,'Kühn','Jasmin','Vertrieb'),
-(921403,'Krüger','Sofia','IT'),
-(169523,'Schwarz','Lukas','Schadenregulierung'),
-(835172,'Becker','Kadir','Finanzen'),
-(364582,'Wagner','Katharina','Personal'),
-(291408,'Schmidt','Kamila','Recht'),
-(590413,'Böhm','Emre','Vertrieb'),
-(812574,'Mayer','Jasmin','IT'),
-(367241,'Mertens','Leon','Schadenregulierung'),
-(183756,'Schulze','Maria','Finanzen'),
-(502476,'Tran','Simon','Personal'),
-(712398,'Hoffmann','Mila','Recht'),
-(285364,'Bergmann','Max','Vertrieb');
 
 CREATE TABLE IF NOT EXISTS inventar
 (
