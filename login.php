@@ -38,7 +38,7 @@
 session_start();
 $host = "localhost";
 $user = "root";
-$password = "1Welcome!";
+$password = "";
 $db = "credentials";
 
 $connection = mysqli_connect($host, $user, $password, $db);
