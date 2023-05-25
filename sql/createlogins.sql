@@ -1,7 +1,5 @@
-DROP DATABASE credentials;
-
-CREATE DATABASE IF NOT EXISTS credentials;
-
+DROP DATABASE IF EXISTS credentials;
+CREATE DATABASE credentials;
 USE credentials;
 
 CREATE TABLE `logins`( 
