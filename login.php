@@ -44,7 +44,7 @@ $db = "credentials";
 try { //Connection Fehler abfangen
     $connection = mysqli_connect($host, $user, $password, $db);
 
-    if ($conn->connect_error) {
+    if ($connection->connect_error) {
         throw new Exception("Es konnte keine Verbindung aufgebaut werden.");
     }
 
@@ -102,7 +102,7 @@ try { //Connection Fehler abfangen
     error_log("Database Connection Error: " . $e->getMessage()); //ins log schreiben
 }
 
-$conn->close(); //Datenbank immer schließen
+$connection->close(); //Datenbank immer schließen
 
 ?>
         <!---------- Formular Ende hier ---------->
