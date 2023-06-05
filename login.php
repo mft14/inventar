@@ -38,7 +38,7 @@
 session_start();
 $host = "localhost";
 $user = "root";
-$password = "1Welcome!";
+$password = "";
 $db = "credentials";
 
 try { //Connection Fehler abfangen
