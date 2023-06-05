@@ -14,8 +14,8 @@ INSERT INTO abteilung (bezeichnung) VALUES
 ('Schadenregulierung'),
 ('Finanzen'),
 ('Personal'),
-('Recht');
-('Kundenservice');
+('Recht'),
+('Kundenservice'),
 ('Aktuariat');
 
 CREATE TABLE IF NOT EXISTS raum

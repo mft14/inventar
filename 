@@ -1,0 +1,272 @@
+[1mdiff --git a/login.php b/login.php[m
+[1mindex dcc6636..ff86d8c 100644[m
+[1m--- a/login.php[m
+[1m+++ b/login.php[m
+[36m@@ -38,7 +38,7 @@[m
+ session_start();[m
+ $host = "localhost";[m
+ $user = "root";[m
+[31m-$password = "";[m
+[32m+[m[32m$password = "1Welcome!";[m
+ $db = "credentials";[m
+ [m
+ try { //Connection Fehler abfangen[m
+[1mdiff --git a/personal/personal.php b/personal/personal.php[m
+[1mindex 5937a60..1db8635 100644[m
+[1m--- a/personal/personal.php[m
+[1m+++ b/personal/personal.php[m
+[36m@@ -1,5 +1,5 @@[m
+     <?php[m
+[31m-	$db_adresse = mysqli_connect('localhost', 'root', '', 'inventardatenbank');[m
+[32m+[m	[32m$db_adresse = mysqli_connect('localhost', 'root', '1Welcome!', 'inventardatenbank');[m[41m[m
+ 	[m
+ 	if(!$db_adresse)[m
+ 	{[m
+[1mdiff --git a/sql/createdb.sql b/sql/createdb.sql[m
+[1mdeleted file mode 100644[m
+[1mindex e3e2385..0000000[m
+[1m--- a/sql/createdb.sql[m
+[1m+++ /dev/null[m
+[36m@@ -1,227 +0,0 @@[m
+[31m-CREATE DATABASE IF NOT EXISTS inventarTest;[m
+[31m-[m
+[31m-USE inventarTest;[m
+[31m-[m
+[31m-CREATE TABLE `itabteilung`( [m
+[31m-    `pk_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,[m
+[31m-    `name` VARCHAR(30) NOT NULL,[m
+[31m-    `vorname` VARCHAR(30) NOT NULL[m
+[31m-);[m
+[31m-[m
+[31m-INSERT INTO itabteilung (name, vorname) VALUES [m
+[31m-('Schumacher', 'Marcel'),[m
+[31m-('Truggle', 'Tingle'),[m
+[31m-('Kennedy', 'Leon'),[m
+[31m-('Graham', 'Ashley'),[m
+[31m-('Kiel', 'Karim'),[m
+[31m-('Kiel', 'Pegy');[m
+[31m-[m
+[31m-CREATE TABLE `personal`( [m
+[31m-    `personalnummer` INT NOT NULL,[m
+[31m-    `name` VARCHAR(30) NOT NULL,[m
+[31m-    `vorname` VARCHAR(30) NOT NULL,[m
+[31m-    `abteilung` VARCHAR(50) NOT NULL[m
+[31m-);[m
+[31m-[m
+[31m-INSERT INTO personal VALUES [m
+[31m-    (362475,'Schmitt','Sophie','Vertrieb'),[m
+[31m-	(615027,'Khan','Timo','IT'),[m
+[31m-	(932681,'Müller','Anna','Schadenregulierung'),[m
+[31m-	(206874,'Schneider','Felix','Finanzen'),[m
+[31m-	(548903,'Bauer','Mia','Personal'),[m
+[31m-	(471835,'Yilmaz','Jan','Recht'),[m
+[31m-	(278316,'Kühn','Jasmin','Vertrieb'),[m
+[31m-	(921403,'Krüger','Sofia','IT'),[m
+[31m-	(169523,'Schwarz','Lukas','Schadenregulierung'),[m
+[31m-	(835172,'Becker','Kadir','Finanzen'),[m
+[31m-	(364582,'Wagner','Katharina','Personal'),[m
+[31m-	(291408,'Schmidt','Kamila','Recht'),[m
+[31m-	(590413,'Böhm','Emre','Vertrieb'),[m
+[31m-	(812574,'Mayer','Jasmin','IT'),[m
+[31m-	(367241,'Mertens','Leon','Schadenregulierung'),[m
+[31m-	(183756,'Schulze','Maria','Finanzen'),[m
+[31m-	(502476,'Tran','Simon','Personal'),[m
+[31m-	(712398,'Hoffmann','Mila','Recht'),[m
+[31m-	(285364,'Bergmann','Max','Vertrieb'),[m
+[31m-	(607129,'Krüger','Sara','IT'),[m
+[31m-	(917562,'Mehmet','Jasmin','Schadenregulierung'),[m
+[31m-	(184935,'Schmitt','Luca','Finanzen'),[m
+[31m-	(653918,'Tran','Lena','Personal'),[m
+[31m-	(764825,'Schulz','Tobias','Recht'),[m
+[31m-	(832106,'Weber','Sara','Vertrieb'),[m
+[31m-	(239861,'Vo','Nina','IT'),[m
+[31m-	(671895,'Kramer','Samir','Schadenregulierung'),[m
+[31m-	(759182,'Schneider','Lara','Finanzen'),[m
+[31m-	(415927,'Meyer','Sofia','Personal'),[m
+[31m-	(609342,'Pohl','Ben','Recht'),[m
+[31m-	(983472,'Nguyen','Linnea','Vertrieb'),[m
+[31m-	(152648,'Le','Lucas','IT'),[m
+[31m-	(517394,'Ali','Hannah','Schadenregulierung'),[m
+[31m-	(427189,'Weber','Lea','Finanzen'),[m
+[31m-	(902137,'Bui','Hanna','Personal'),[m
+[31m-	(635281,'Fischer','Jonas','Recht'),[m
+[31m-	(517293,'Schwarz','Lena','Vertrieb'),[m
+[31m-	(195236,'Keller','Paul','IT'),[m
+[31m-	(427190,'Hoffmann','Celine','Schadenregulierung'),[m
+[31m-	(364902,'Vo','Hans','Finanzen'),[m
+[31m-	(318742,'Kramer','Amelie','Personal'),[m
+[31m-	(173659,'Köhler','Finn','Recht'),[m
+[31m-	(547829,'Bergmann','Jana','Vertrieb'),[m
+[31m-	(619347,'Bachmann','Hanna','IT'),[m
+[31m-	(928463,'Said','Jasmin','Schadenregulierung'),[m
+[31m-	(374651,'Schulz','Luca','Finanzen'),[m
+[31m-	(765239,'Schmidt','Lena','Personal'),[m
+[31m-	(839672,'Krüger','David','Recht'),[m
+[31m-	(471826,'Böhm','Lea','Vertrieb'),[m
+[31m-	(982536,'Müller','Nina','IT'),[m
+[31m-	(209371,'Khan','Ali','Schadenregulierung'),[m
+[31m-	(981746,'Weber','Sophie','Finanzen'),[m
+[31m-	(274836,'Schneider','Nico','Personal'),[m
+[31m-	(629184,'Fischer','Tim','Recht'),[m
+[31m-	(472689,'Schwarz','Sophia','Vertrieb'),[m
+[31m-	(915732,'Schulz','Hannah','IT'),[m
+[31m-	(986317,'Becker','Jan','Vertrieb'),[m
+[31m-	(410954,'Fischer','Lena','Aktuariat'),[m
+[31m-	(563820,'Schuster','Tom','Vertrieb'),[m
+[31m-	(703221,'Kovács','Krisztina','Schadenregulierung'),[m
+[31m-	(715430,'Kumar','Ajay','Kundenservice'),[m
+[31m-	(197035,'Weber','Sophie','Finanzen'),[m
+[31m-	(226101,'Schreiber','Luisa','Kundenservice'),[m
+[31m-	(906312,'Müller','Ina','Personal'),[m
+[31m-	(541209,'Keller','Tobias','Aktuariat'),[m
+[31m-	(841563,'González','Antonio','Schadenregulierung'),[m
+[31m-	(354897,'Sauer','Anna','Vertrieb'),[m
+[31m-	(802341,'Öztürk','Can','Kundenservice'),[m
+[31m-	(609487,'Hoffmann','Nina','Finanzen'),[m
+[31m-	(150763,'Varga','Máté','Aktuariat'),[m
+[31m-	(905743,'Le','Thanh','Schadenregulierung'),[m
+[31m-	(726540,'Hartmann','Sarah','Vertrieb'),[m
+[31m-	(240513,'Schmidt','Maximilian','Kundenservice'),[m
+[31m-	(521703,'Nguyen','Thi','Finanzen'),[m
+[31m-	(441206,'Schneider','Daniel','Personal'),[m
+[31m-	(247915,'Rosenberg','Natalie','Schadenregulierung'),[m
+[31m-	(345102,'Mayer','Julia','Vertrieb'),[m
+[31m-	(666312,'Kara','Mustafa','Kundenservice'),[m
+[31m-	(784213,'Liu','Jing','Finanzen'),[m
+[31m-	(445623,'Winkler','Lisa','Aktuariat'),[m
+[31m-	(988517,'Sánchez','Luis','Vertrieb'),[m
+[31m-	(205613,'Hansen','Lea','Schadenregulierung'),[m
+[31m-	(675841,'Erdem','Murat','Kundenservice'),[m
+[31m-	(411753,'Schmitt','Jonas','Personal'),[m
+[31m-	(841907,'Koç','Emre','Aktuariat'),[m
+[31m-	(259146,'Klein','Marie','Vertrieb'),[m
+[31m-	(378094,'Hartwig','Kevin','Kundenservice'),[m
+[31m-	(913742,'García','Ana','Finanzen'),[m
+[31m-	(657309,'Ebert','Lisa','Schadenregulierung'),[m
+[31m-	(530417,'Kumar','Pooja','Aktuariat'),[m
+[31m-	(449865,'Friedrich','Mia','Vertrieb'),[m
+[31m-	(199645,'Mueller','Christoph','Kundenservice'),[m
+[31m-	(655741,'Pawlowski','Ania','Finanzen'),[m
+[31m-	(334957,'Yildiz','Cem','Schadenregulierung'),[m
+[31m-	(825130,'Hassan','Mohammed','Vertrieb'),[m
+[31m-	(679514,'Müller','Klaus','Kundenservice'),[m
+[31m-	(510372,'Schneider','Sophie','Personal'),[m
+[31m-	(284017,'Ivanova','Natalia','Aktuariat'),[m
+[31m-	(697210,'Schmitt','Laura','Vertrieb'),[m
+[31m-	(198046,'Zhang','Wei','Kundenservice'),[m
+[31m-	(766194,'Vogel','Simon','Finanzen'),[m
+[31m-	(872165,'Soto','Maria','Schadenregulierung'),[m
+[31m-	(331609,'Le','Chi','Aktuariat'),[m
+[31m-	(645321,'Jansen','Tom','Vertrieb'),[m
+[31m-	(813564,'Kohl','Hannah','Kundenservice'),[m
+[31m-	(288125,'Tóth','Márton','Finanzen'),[m
+[31m-	(413486,'Weber','Hans-Peter','Aktuariat'),[m
+[31m-	(930256,'Schuster','Jasmin','Vertrieb'),[m
+[31m-	(740615,'Schmidt','Lena','Schadenregulierung'),[m
+[31m-	(391242,'Krause','Matthias','Finanzen'),[m
+[31m-	(672510,'Fischer','Nadine','IT'),[m
+[31m-	(139872,'Peters','Janine','Personal'),[m
+[31m-	(850493,'Gomez','Sofia','Recht'),[m
+[31m-	(764135,'Wang','Liu','Kundenservice'),[m
+[31m-	(901234,'Kaufmann','Katharina','Aktuariat'),[m
+[31m-	(487321,'Jensen','Hans','Vertrieb'),[m
+[31m-	(232319,'Huber','Sarah','Schadenregulierung'),[m
+[31m-	(128438,'Mayer','Tobias','Finanzen'),[m
+[31m-	(238769,'Bauer','Stefanie','IT'),[m
+[31m-	(784968,'Albrecht','Michaela','Personal'),[m
+[31m-	(919693,'Nguyen','Minh','Recht'),[m
+[31m-	(603951,'Hoffmann','Andreas','Kundenservice'),[m
+[31m-	(809346,'Vo','Anh','Aktuariat'),[m
+[31m-	(514998,'Berger','Melanie','Vertrieb'),[m
+[31m-	(745073,'Schneider','Oliver','Schadenregulierung'),[m
+[31m-	(126982,'Lorenz','Stephanie','Finanzen'),[m
+[31m-	(319498,'Werner','Markus','IT'),[m
+[31m-	(378110,'Müller','Anna-Lena','Personal'),[m
+[31m-	(967318,'Ali','Mohammed','Recht'),[m
+[31m-	(463129,'Wong','Ming','Kundenservice'),[m
+[31m-	(622580,'Brandt','Caroline','Aktuariat'),[m
+[31m-	(925377,'Perez','Juan','Vertrieb'),[m
+[31m-	(249637,'Becker','Sophie','Schadenregulierung'),[m
+[31m-	(462186,'Baumann','Julia','Finanzen'),[m
+[31m-	(856390,'Klein','Mark','IT'),[m
+[31m-	(679580,'Jäger','Sarah','Personal'),[m
+[31m-	(325867,'Santos','Rafael','Recht'),[m
+[31m-	(574113,'Lee','Min-Jung','Kundenservice'),[m
+[31m-	(201547,'Scholz','Andrea','Aktuariat'),[m
+[31m-	(561952,'Krüger','Marius','Vertrieb'),[m
+[31m-	(473891,'Roth','Christina','Schadenregulierung'),[m
+[31m-	(949362,'Köhler','Tina','Finanzen'),[m
+[31m-	(524810,'Schneider','Martin','IT'),[m
+[31m-	(850167,'Maier','Sabrina','Personal'),[m
+[31m-	(142683,'Kumar','Vikram','Recht'),[m
+[31m-	(534263,'Chang','Li','Kundenservice'),[m
+[31m-	(837609,'Wagner','Lisa','Aktuariat'),[m
+[31m-	(546038,'Bach','Johannes','Vertrieb'),[m
+[31m-	(374015,'Hartmann','Monika','Schadenregulierung'),[m
+[31m-	(635689,'Wolf','Daniel','Finanzen'),[m
+[31m-	(889307,'Schwarz','Simone','IT'),[m
+[31m-	(151487,'Graf','Marcel','Personal'),[m
+[31m-	(493726,'Ahmed','Zainab','Recht'),[m
+[31m-	(258743,'Chen','Wei','Kundenservice'),[m
+[31m-	(719385,'Hansen','Sabine','Aktuariat'),[m
+[31m-	(358243,'Neumann','Jörg','Vertrieb'),[m
+[31m-	(764890,'Lange','Tanja','Schadenregulierung'),[m
+[31m-	(183927,'Schmitt','Benjamin','Finanzen'),[m
+[31m-	(634102,'Richter','Sandra','IT'),[m
+[31m-	(968531,'Wagner','Jana','Personal'),[m
+[31m-	(413067,'Santos','Leonor','Recht'),[m
+[31m-	(752186,'Kim','Sung','Kundenservice'),[m
+[31m-	(815436,'Bender','Jasmin','Vertrieb'),[m
+[31m-	(914763,'Schmidt','Jan','Personal'),[m
+[31m-	(712345,'Ahmed','Sara','Kundenservice'),[m
+[31m-	(568971,'Bauer','Jana','IT'),[m
+[31m-	(624015,'Khan','Rania','Schadenregulierung'),[m
+[31m-	(479106,'Brandt','Maja','Finanzen'),[m
+[31m-	(822360,'Schwarz','Julian','Aktuariat'),[m
+[31m-	(705482,'Wang','Chen','Recht'),[m
+[31m-	(497821,'Jäger','Andreas','IT'),[m
+[31m-	(103275,'Kaya','Melisa','Kundenservice'),[m
+[31m-	(340901,'Fuchs','Lara','Vertrieb'),[m
+[31m-	(907631,'Schreiber','Ina','Personal'),[m
+[31m-	(846720,'Hassan','Mohammed','Kundenservice'),[m
+[31m-	(681539,'Werner','Steffi','IT'),[m
+[31m-	(531947,'Kumar','Arjun','Schadenregulierung'),[m
+[31m-	(309027,'Lorenz','Emma','Finanzen'),[m
+[31m-	(936527,'Le','Trang','Aktuariat'),[m
+[31m-	(756193,'Kohl','Markus','Recht'),[m
+[31m-	(217893,'Thiago','Silva','IT'),[m
+[31m-	(201935,'Jung','Minji','Kundenservice'),[m
+[31m-	(107923,'Mayer','Tina','Vertrieb'),[m
+[31m-	(253194,'Nguyen','Ngoc','Personal'),[m
+[31m-	(759631,'Abdullah','Aisha','Schadenregulierung'),[m
+[31m-	(530216,'Winter','Heidi','Finanzen'),[m
+[31m-	(482703,'Krause','Hans','Aktuariat'),[m
+[31m-	(698423,'Fischer','Luis','Recht'),[m
+[31m-	(391276,'Bülow','Ingrid','IT'),[m
+[31m-	(965381,'Das','Arya','Kundenservice'),[m
+[31m-	(154830,'Pohl','Kurt','Vertrieb'),[m
+[31m-	(480927,'Wagner','Bianca','Personal'),[m
+[31m-	(697150,'Chen','Yi','Kundenservice'),[m
+[31m-	(299801,'Keller','Thomas','IT'),[m
+[31m-	(146085,'Bui','Tuan','Schadenregulierung'),[m
+[31m-	(978631,'Müller','Johannes','Finanzen'),[m
+[31m-	(309623,'Kühn','Susanne','Aktuariat'),[m
+[31m-	(471859,'Jansen','Anne','Recht'),[m
+[31m-	(727410,'Tran','My','IT'),[m
+[31m-	(174528,'Ko','Yun','Schadenregulierung');[m
+[31m-[m
+[1mdiff --git a/sql/inventardb.sql b/sql/inventardb.sql[m
+[1mindex d908a96..bfa1b4e 100644[m
+[1m--- a/sql/inventardb.sql[m
+[1m+++ b/sql/inventardb.sql[m
+[36m@@ -14,8 +14,8 @@[m [mINSERT INTO abteilung (bezeichnung) VALUES[m
+ ('Schadenregulierung'),[m
+ ('Finanzen'),[m
+ ('Personal'),[m
+[31m-('Recht');[m
+[31m-('Kundenservice');[m
+[32m+[m[32m('Recht'),[m
+[32m+[m[32m('Kundenservice'),[m
+ ('Aktuariat');[m
+ [m
+ CREATE TABLE IF NOT EXISTS raum[m
