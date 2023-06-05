@@ -61,6 +61,7 @@ function sendData() {
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("datum=" + datumFormatiert + "&preis=" + preis + "&seriennummer=" + seriennummer + "&anmerkung=" + anmerkung + "&modell=" + modell + "&raumbezeichnung=" + raumbezeichnung);
 	alert("Datensatz erfolgreich eingefügt");
+	javascript:location.reload();
 }
 
 $(document).ready(function(){
