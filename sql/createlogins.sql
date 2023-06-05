@@ -1,6 +1,4 @@
-DROP DATABASE IF EXISTS credentials;
-CREATE DATABASE credentials;
-USE credentials;
+USE inventardatenbank;
 
 CREATE TABLE `logins`( 
     `pk_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

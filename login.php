@@ -39,7 +39,7 @@ session_start();
 $host = "localhost";
 $user = "root";
 $password = "";
-$db = "credentials";
+$db = "inventardatenbank";
 
 try { //Connection Fehler abfangen
     $connection = mysqli_connect($host, $user, $password, $db);
