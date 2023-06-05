@@ -27,6 +27,7 @@
 		<option value="Recht">Recht</option>
 		<option value="Aktuariat">Aktuariat</option>
 		<option value="Kundenservice">Kundenservice</option>
+		<option value="Vertrieb">Vertrieb</option>
 	</select>
 
 	<table id="mitarbeiter-tabelle">
