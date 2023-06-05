@@ -30,5 +30,7 @@
           
 		  fclose($fileVar);  
          }
-      }   
+      }  
+     $url = "index.php";
+     header("Location: $url");
      ?>
