@@ -20,6 +20,7 @@
 	<h1>Alle Mitarbeiter</h1>
 	<label for="abteilung">Abteilung:</label>
 	<select id="abteilung">
+		<option value="" selected disabled hidden>Abteilung wählen</option>
 		<option value="IT">IT</option>
 		<option value="Schadenregulierung">Schadenregulierung</option>
 		<option value="Finanzen">Finanzen</option>
