@@ -101,4 +101,5 @@ function sendDataEntfernen() {
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("inventarnummer=" + selectedInventarnummer);
 	alert("Datensatz erfolgreich entfernt");
+	javascript:location.reload();
 }
