@@ -1,7 +1,7 @@
 # Inventar Datenbank
-Projektstart: 
-Projektende: 9. Juni 2023
-Mitwirkende: Leon, Jannik, Marc, Lukas, Karim
+Projektstart:    
+Projektende: 9. Juni 2023     
+Mitwirkende: Leon, Jannik, Marc, Lukas, Karim    
 
 # How to use
 Um unsere Inventardatenbank zu nutzen, wird ein lokaler Webserver benötigt. Wir haben XAMPP benutzt.  
