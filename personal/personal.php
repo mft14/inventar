@@ -5,7 +5,7 @@
 	{
 		die ("<p> FEHLER!!!</p>");
 	}
-
+     $uploadMessage = '';
      if(isset($_POST["file"])){
         
         $filename=$_FILES["file"]["tmp_name"];    
@@ -24,13 +24,14 @@
                  $sql = "INSERT into mitarbeiter (personalnummer, name, vorname, abteilung_id) 
                        values ('".$getData[0]."','".$getData[1]."','".$getData[2]."',
 					   (SELECT abteilung.abteilung_id FROM abteilung WHERE bezeichnung = '".$getData[3]."')) ON DUPLICATE KEY UPDATE personalnummer='".$getData[0]."', name='".$getData[1]."', vorname = '".$getData[2]."', abteilung_id = (SELECT abteilung.abteilung_id FROM abteilung WHERE bezeichnung = '".$getData[3]."')";
-					   $result = mysqli_query($db_adresse, $sql);		   		   	   
+					   $result = mysqli_query($db_adresse, $sql);	
+		$uploadMessage = 'Die Datei wurde erfolgreich hochgeladen.';
 				}
 			   }
           
 		  fclose($fileVar);  
          }
       }  
-     $url = "index.php";
-     header("Location: $url");
+    $url = "index.php?message=" . urlencode($uploadMessage);
+    header("Location: $url");
      ?>
