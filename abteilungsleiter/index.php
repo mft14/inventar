@@ -10,7 +10,7 @@
 <html>
 <head>
 	<title>Asset-Management</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="../ajax.googleapis.com_ajax_libs_jquery_3.6.0_jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="leitung.css">
     <link rel="stylesheet" href="../src/main.css" type="text/css">
     <link rel="shortcut icon" href="../src/inventarlogo.svg">
