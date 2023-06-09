@@ -13,7 +13,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="einkauf.css"> <!-- Verweis auf die CSS-Datei -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="ajax.googleapis.com_ajax_libs_jquery_3.6.0_jquery.min.js"></script>
 	<script src="einkauf.js"></script> <!-- Verweis auf die JavaScript-Datei -->
     <link rel="stylesheet" href="../src/main.css" type="text/css">
     <link rel="shortcut icon" href="../src/inventarlogo.svg">
