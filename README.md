@@ -33,11 +33,11 @@ Hier eine Liste:
 Zum Testen kann also der Adminaccount genutzt werden. Bei der Personalabteilung kann die von Moodle 
 bereitgestellte CSV Datei hochgeladen werden.   
 
-Unter PER kann man die Personal.csv einfügen.
-Unter ABT kann man Verantwortlichkeiten einsehen.
-Unter IT1 kann man neue Verantwortlichkeiten hinzufügen, indem man oben zwei Daten angibt und jeweils einen Eintrag der beiden Tabellen mit der linken Maustaste anklickt (Einträge werden anschließend über der Tabelle angezeigt).
-Unter IT2 kann man neue Geräte hinzufügen oder entfernen.
-   - Entfernen funktioniert wie bei IT1, es muss also ein Eintrab angeklickt werden und anschließen auf Absenden um den Eintrag zu löschen
-   - Um ein neues Gerät hinzuzufügen muss man zuerst alle Felder ausfüllen und anschließend auf den Absenden Knopf drücken
+Unter PER kann man die Personal.csv einfügen.   
+Unter ABT kann man Verantwortlichkeiten einsehen.   
+Unter IT1 kann man neue Verantwortlichkeiten hinzufügen, indem man oben zwei Daten angibt und jeweils einen Eintrag der beiden Tabellen mit der linken Maustaste anklickt (Einträge werden anschließend über der Tabelle angezeigt).   
+Unter IT2 kann man neue Geräte hinzufügen oder entfernen.   
+   - Entfernen funktioniert wie bei IT1, es muss also ein Eintrag angeklickt werden und anschließen auf Absenden um den Eintrag zu löschen.
+   - Um ein neues Gerät hinzuzufügen muss man zuerst alle Felder ausfüllen und anschließend auf den Absenden Knopf drücken.
 
 
